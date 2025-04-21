@@ -11,14 +11,14 @@ import random
 import pandas as pd
 
 # Experimentos con combinaciones múltiples
-learning_rates = [0.0001, 0.001]
-gammas = [0.8, 0.9]
-hidden_sizes = [128, 256]
-batch_sizes = [500, 1000]
+learning_rates = [0.001]
+gammas = [0.8]
+hidden_sizes = [256, 512, 1024]
+batch_sizes = [500]
 
-NUM_GAMES = 200
+NUM_GAMES = 250
 MAX_MEMORY = 100_000
-RENDER_SPEED = 80  # +o- 20
+RENDER_SPEED = 100  # +o- 20
 
 
 class Agent:
@@ -31,7 +31,8 @@ class Agent:
         self.n_games = 0
 
     def get_action(self, state):
-        self.epsilon = 80 - self.n_games
+        self.epsilon = max(5, 80 - 0.995 * self.n_games)
+        # self.epsilon = 80 - self.n_games
         if random.randint(0, 200) < self.epsilon:
             move = random.randint(0, 2)
             action = [0, 0, 0]
@@ -125,3 +126,9 @@ if __name__ == "__main__":
     df = df.sort_values(by="max_score", ascending=False)
     print("\\n=== RESUMEN FINAL ORDENADO POR MAX SCORE ===")
     print(df.to_string(index=False))
+
+    # crear archivo de texto con las metricas en tabla
+    with open("experiments_summary.txt", "w") as f:
+        f.write(df.to_string(index=False))
+    # guardar el dataframe como csv
+    df.to_csv("experiments_summary.csv", index=False)

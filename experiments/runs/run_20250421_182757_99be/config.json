@@ -1,0 +1,7 @@
+{
+  "description": "LR=0.001, gamma=0.8, hidden=256, batch=1000",
+  "lr": 0.001,
+  "gamma": 0.8,
+  "hidden_size": 256,
+  "batch_size": 1000
+}
