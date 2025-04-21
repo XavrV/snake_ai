@@ -1,2 +1,5 @@
 run_id,description,lr,gamma,hidden_size,batch_size,max_score,avg_score,num_games
 run_20250421_165004_8ed0,Deep Q baseline test,0.001,0.9,256,1000,3,0.5,18
+run_20250421_165213_5dda,Deep Q baseline test,0.001,0.9,256,1000,33,9.38,200
+run_20250421_171158_f175,Test LR=0.0001,0.0001,0.9,256,1000,12,1.295,200
+run_20250421_171638_e81e,Test LR=0.0005,0.0005,0.9,256,1000,31,7.91,200
