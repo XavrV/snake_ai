@@ -13,7 +13,7 @@ BATCH_SIZE = 1000
 GAMMA = 0.9
 HIDDEN_SIZE = 256
 NUM_GAMES = 200
-RENDER_SPEED = 60  # triple de velocidad anterior
+RENDER_SPEED = 60  # +o- 20
 
 learning_rates = [0.0001, 0.0005, 0.001, 0.005, 0.01]
 
