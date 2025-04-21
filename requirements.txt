@@ -1,6 +1,7 @@
 # Base
 pygame==2.5.2
 numpy==1.26.4
+pandas==2.1.3
 
 # Machine Learning
 torch==2.2.2
