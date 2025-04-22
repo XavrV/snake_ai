@@ -17,9 +17,9 @@ RENDER_SPEED = 200
 
 # Hiperparámetros
 learning_rates = [0.001]
-gammas = [0.8, 0.85]
+gammas = [0.85, 0.90]
 hidden_sizes = [256, 128]
-batch_sizes = [500]
+batch_sizes = [128, 256]
 state_functions = [
     ("get_state", get_state, 11),
     ("get_state2", get_state2, 19),

@@ -1,0 +1,9 @@
+{
+  "description": "get_state | LR=0.001, \u03b3=0.85, h=128, b=128",
+  "lr": 0.001,
+  "gamma": 0.85,
+  "hidden_size": 128,
+  "batch_size": 128,
+  "state_function": "get_state",
+  "input_size": 11
+}
