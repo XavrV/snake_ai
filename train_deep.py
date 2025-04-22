@@ -13,8 +13,8 @@ import random
 # Configuración del experimento
 LR = 0.001
 GAMMA = 0.8
-HIDDEN_SIZE1 = 1024
-HIDDEN_SIZE2 = 1024
+HIDDEN_SIZE1 = 256
+HIDDEN_SIZE2 = 256
 BATCH_SIZE = 500
 MAX_MEMORY = 100_000
 NUM_GAMES = 1000
@@ -85,7 +85,7 @@ def train():
         state_old = get_state(game)
         action = agent.get_action(state_old)
         reward, done, score = game.play_step(action)
-        # game.render_pygame(speed=RENDER_SPEED)
+        game.render_pygame(speed=RENDER_SPEED)
 
         for event in pygame.event.get():
             if event.type == pygame.QUIT:
