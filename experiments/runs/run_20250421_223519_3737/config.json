@@ -1,0 +1,10 @@
+{
+  "description": "DeepQNet test with 2 hidden layers",
+  "lr": 0.001,
+  "gamma": 0.8,
+  "hidden_size_1": 1024,
+  "hidden_size_2": 1024,
+  "batch_size": 500,
+  "epsilon_decay": 0.995,
+  "epsilon_min": 5
+}

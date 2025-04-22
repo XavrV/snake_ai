@@ -12,11 +12,11 @@ import pandas as pd
 
 # Experimentos con combinaciones múltiples
 learning_rates = [0.001]
-gammas = [0.8]
-hidden_sizes = [256, 512, 1024]
+gammas = [0.8, 0.85]
+hidden_sizes = [512, 1024]
 batch_sizes = [500]
 
-NUM_GAMES = 250
+NUM_GAMES = 1000
 MAX_MEMORY = 100_000
 RENDER_SPEED = 100  # +o- 20
 
@@ -77,7 +77,7 @@ def run_experiment(lr, gamma, hidden_size, batch_size, results_summary):
         state_old = get_state(game)
         action = agent.get_action(state_old)
         reward, done, score = game.play_step(action)
-        game.render_pygame(speed=RENDER_SPEED)
+        # game.render_pygame(speed=RENDER_SPEED)
 
         for event in pygame.event.get():
             if event.type == pygame.QUIT:
