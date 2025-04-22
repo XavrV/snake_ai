@@ -1,0 +1,9 @@
+{
+  "description": "get_state2 | LR=0.001, \u03b3=0.9, h=512, b=250",
+  "lr": 0.001,
+  "gamma": 0.9,
+  "hidden_size": 512,
+  "batch_size": 250,
+  "state_function": "get_state2",
+  "input_size": 19
+}

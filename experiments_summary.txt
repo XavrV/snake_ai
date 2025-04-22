@@ -1,5 +1,13 @@
-   lr  gamma  hidden_size  batch_size  max_score  avg_score
-0.001   0.80         1024         500         36     12.223
-0.001   0.85         1024         500         36     12.068
-0.001   0.85          512         500         34     12.185
-0.001   0.80          512         500         32     12.261
+state_function    lr  gamma  hidden_size  batch_size  max_score  avg_score
+    get_state3 0.001    0.9          512         250         35      8.674
+     get_state 0.001    0.9          256         125         33     10.478
+    get_state3 0.001    0.9          256         125         33      6.608
+     get_state 0.001    0.9          256         250         33      9.380
+     get_state 0.001    0.9          512         125         31     11.048
+    get_state3 0.001    0.9          256         250         29      8.796
+    get_state3 0.001    0.9          512         125         29      8.444
+     get_state 0.001    0.9          512         250         28     10.716
+    get_state2 0.001    0.9          256         125         26      6.126
+    get_state2 0.001    0.9          256         250         26      6.398
+    get_state2 0.001    0.9          512         125         26      6.536
+    get_state2 0.001    0.9          512         250         25      6.598

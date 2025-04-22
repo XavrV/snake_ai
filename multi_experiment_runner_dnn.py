@@ -17,9 +17,9 @@ RENDER_SPEED = 200
 
 # Hiperparámetros
 learning_rates = [0.001]
-gammas = [0.85, 0.90]
-hidden_sizes = [256, 128]
-batch_sizes = [128, 256]
+gammas = [0.90]
+hidden_sizes = [256, 512]
+batch_sizes = [125, 250]
 state_functions = [
     ("get_state", get_state, 11),
     ("get_state2", get_state2, 19),
@@ -40,6 +40,9 @@ class Agent:
 
     def get_action(self, state):
         self.epsilon = max(5, 80 - 0.995 * self.n_games)
+
+        # implementar max(ε_min, ε - ε_decay)??
+
         if random.randint(0, 200) < self.epsilon:
             move = random.randint(0, 2)
             action = [0, 0, 0]
